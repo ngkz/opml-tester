@@ -1,0 +1,5 @@
+colorama
+listparser
+requests
+feedparser
+python-dateutil
