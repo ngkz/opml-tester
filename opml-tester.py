@@ -55,7 +55,8 @@ if __name__ == "__main__":
 
     for path in sys.argv[1:]:
         print(Fore.CYAN + Style.BRIGHT + "Checking OPML {}".format(path) + Fore.RESET + Style.RESET_ALL)
-        result = listparser.parse(path)
+        with open(path, "r") as f:
+            result = listparser.parse(f.read())
 
         for feed in result.feeds:
             feed_text = get("feed", feed.title, feed.url)
@@ -67,7 +68,6 @@ if __name__ == "__main__":
                 print(Fore.RED + Style.BRIGHT + "NG (FEED)" + Fore.RESET + Style.RESET_ALL)
                 continue
 
-            #pprint(feed)
             latest = -1
             for entry in feed.entries:
                 if 'updated' in entry:
