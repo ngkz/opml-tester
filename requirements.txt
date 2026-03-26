@@ -18,7 +18,7 @@ listparser==0.20
     # via -r requirements.in
 python-dateutil==2.9.0.post0
     # via -r requirements.in
-requests==2.32.5
+requests==2.33.0
     # via -r requirements.in
 sgmllib3k==1.0.0
     # via feedparser
