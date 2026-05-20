@@ -12,7 +12,7 @@ colorama==0.4.6
     # via -r requirements.in
 feedparser==6.0.12
     # via -r requirements.in
-idna==3.11
+idna==3.15
     # via requests
 listparser==0.20
     # via -r requirements.in
